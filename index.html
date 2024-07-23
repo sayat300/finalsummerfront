@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="shortcut icon" href="images/favicon.png" type="">
+    <title> Sayat's Fastfood </title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <button type="button" id="chat" class="btn btn-primary chat-toggle-btn" data-toggle="modal" data-target="#chatModal">
+      <i class='bx bxs-message-dots'></i>
+    </button>
+    <div class="modal" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="chatModalLabel">Live Chat</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item" style="padding-left: 40px;" >
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                <label class="form-check-label" for="firstCheckbox">Problem with the site</label>
+              </li>
+              <li class="list-group-item" style="padding-left: 40px;">
+                <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                <label class="form-check-label" for="secondCheckbox">Problem with payment</label>
+              </li>
+              <li class="list-group-item" style="padding-left: 40px;">
+                <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                <label class="form-check-label" for="thirdCheckbox">Another problem</label>
+              </li>
+            </ul>
+            <div id="chatMessages" class="mb-3"></div>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Type your email..." id="chatInput">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" onclick="alert('Message sent, we will contact with you later on!')">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero_area" id="top">
+      <div class="bg-box">
+        <img src="images/hero-bg.jpg" alt="" />
+      </div>
+      <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <span> Pizza </span>
+            </a>
+              <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class=""> </span>
+            </button>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html" style="color:#ffbe33">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="book.html">Feedback</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <a href="" class="user_link">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
+                <a class="cart_link" href="#"> </a>
+                <div class="dropdown">
+                  <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;">
+                    Order Online
+                  </button>
+                  <ul class="dropdown-menu" >
+                    <li><a class="dropdown-item" href="#">Takeaway</a></li>
+                    <li><a class="dropdown-item" href="#">Book a table</a></li>
+                    <li><a class="dropdown-item" href="#">On house</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <section class="slider_section">
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-7 col-lg-6">
+                    <div class="detail-box">
+                      <h1>Sayat's fastfood</h1>
+                      <p>
+                        Savor the perfect blend of flavors with our fast food delight. Quick, delectable, and served with a smile – we're the destination for instant satisfaction, where each bite tells a tale of culinary excellence and joyous moments
+                      </p>
+                      <div class="btn-box">
+                        <a href="" class="btn1"> Order Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-7 col-lg-6">
+                    <div class="detail-box">
+                      <h1>Fast Food Restaurant</h1>
+                      <p>
+                        Savor the perfect blend of flavors with our fast food delight. Quick, delectable, and served with a smile – we're the destination for instant satisfaction, where each bite tells a tale of culinary excellence and joyous moments
+                      </p>
+                      <div class="btn-box">
+                        <a href="" class="btn1">Pizza Game</a>
+                     
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-7 col-lg-6">
+                    <div class="detail-box">
+                      <h1>Fast Food Restaurant</h1>
+                      <p>
+                        Savor the perfect blend of flavors with our fast food delight. Quick, delectable, and served with a smile – we're the destination for instant satisfaction, where each bite tells a tale of culinary excellence and joyous moments
+                      </p>
+                      <div class="btn-box">
+                        <a href="" class="btn1"> Order Now </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#customCarousel1"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#customCarousel1" data-slide-to="1"></li>
+              <li data-target="#customCarousel1" data-slide-to="2"></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+   
+    </div>
+
+   
+
+    <section class="offer_section layout_padding-bottom">
+      <div class="offer_container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="box">
+                <div class="img-box">
+                  <img class="rotatingPizza" src="images/beshpizza.png" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Beshpizza burger</h5>
+                  <h6><span>10%</span> Off</h6>
+                  <a href=""> Order Now </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="box">
+                <div class="img-box">
+                  <img class="rotatingPizza" src="images/pepperoni.png" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Pepperoni Pizza</h5>
+                  <h6><span>15%</span> Off</h6>
+                  <a href=""> Order Now </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="food_section layout_padding-bottom">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>Our Menu</h2>
+        </div>
+
+        <ul class="filters_menu">
+          <li class="active" data-filter="*">All</li>
+          <li data-filter=".burger">Burger</li>
+          <li data-filter=".pizza">Pizza</li>
+          <li data-filter=".pasta">Pasta</li>
+          <li data-filter=".fries">Fries</li>
+        </ul>
+
+        <div class="filters-content">
+          <div class="row grid">
+            <div class="col-sm-6 col-lg-4 all pizza">
+              <div class="box">
+                <div class="card" style="height: 450px;">
+                  <img src="images/f1.png" class="card-img-top" height="200px" width="inherit" style="transform: scale(0.8);">
+                  <div class="card-body" style="background-color: #222831;">
+                    <h5 class="card-title" style="color: #fff;">Pizza</h5>
+                    <p style="color: #fff;">
+                      Indulge in our savory burgers, a symphony of juicy beef, fresh veggies, and melted cheese. Or savor our pizzas, a perfect fusion of crispy crust, rich sauce, and delightful toppings.
+                    </p>
+                    <a href="#" class="btn btn-warning" style="color: #fff;">2000₸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 all burger">
+              <div class="box">
+                <div class="card" style="height: 450px;">
+                  <img src="images/f2.png" class="card-img-top" height="200px" width="inherit" style="transform: scale(0.8);">
+                  <div class="card-body" style="background-color: #222831;">
+                    <h5 class="card-title" style="color: #fff;">Beaf burger</h5>
+                    <p style="color: #fff;">
+                      Indulge in our savory burgers, a symphony of juicy beef, fresh veggies, and melted cheese. Or savor our pizzas, a perfect fusion of crispy crust, rich sauce, and delightful toppings.
+                    </p>
+                    <a href="#" class="btn btn-warning" style="color: #fff;">1350₸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 all pizza">
+              <div class="box">
+                <div class="card" style="height: 450px;">
+                  <img src="images/f3.png" class="card-img-top" height="200px" width="inherit" style="transform: scale(0.8);">
+                  <div class="card-body" style="background-color: #222831;">
+                    <h5 class="card-title" style="color: #fff;">Margherita Pizza</h5>
+                    <p style="color: #fff;">
+                      Its thin, crispy crust is adorned with a vibrant red tomato sauce, slices of fresh, juicy tomatoes, and generous portions of creamy, milky mozzarella cheese.
+                    </p>
+                    <a href="#" class="btn btn-warning" style="color: #fff;">2000₸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 all pasta">
+              <div class="box">
+                <div class="card" style="height: 450px;">
+                  <img src="images/f4.png" class="card-img-top" height="200px" width="inherit" style="transform: scale(0.8);">
+                  <div class="card-body" style="background-color: #222831;">
+                    <h5 class="card-title" style="color: #fff;">Pasta</h5>
+                    <p style="color: #fff;">
+                      Indulge in our savory burgers, a symphony of juicy beef, fresh veggies, and melted cheese. Or savor our pizzas, a perfect fusion of crispy crust, rich sauce, and delightful toppings.
+                    </p>
+                    <a href="#" class="btn btn-warning" style="color: #fff;">2000₸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 all fries">
+              <div class="box">
+                <div class="card" style="height: 450px;">
+                  <img src="images/f5.png" class="card-img-top" height="200px" width="inherit" style="transform: scale(0.8);">
+                  <div class="card-body" style="background-color: #222831;">
+                    <h5 class="card-title" style="color: #fff;">Fries</h5>
+                    <p style="color: #fff;">
+                      Indulge in our savory burgers, a symphony of juicy beef, fresh veggies, and melted cheese. Or savor our pizzas, a perfect fusion of crispy crust, rich sauce, and delightful toppings.
+                    </p>
+                    <a href="#" class="btn btn-warning" style="color: #fff;">700₸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 all pizza">
+              <div class="box">
+                <div class="card" style="height: 450px;">
+                  <img src="images/f6.png" class="card-img-top" height="200px" width="inherit" style="transform: scale(0.8);">
+                  <div class="card-body" style="background-color: #222831;">
+                    <h5 class="card-title" style="color: #fff;">Pepperoni Pizza</h5>
+                    <p style="color: #fff;">The pepperoni pizza boasts a tantalizing combination of zesty flavors. Its doughy base serves as a canvas for a robust layer of tangy tomato sauce, generously topped with savory, thinly sliced pepperoni.
+                    </p>
+                    <a href="#" class="btn btn-warning" style="color: #fff;">2000₸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 all burger">
+              <div class="box">
+                <div class="card" style="height: 450px;">
+                  <img src="images/f7.png" class="card-img-top" height="200px" width="inherit" style="transform: scale(0.8);">
+                  <div class="card-body" style="background-color: #222831;">
+                    <h5 class="card-title" style="color: #fff;">Chicken Burger</h5>
+                    <p style="color: #fff;">
+                      Indulge in our savory burgers, a symphony of juicy beef, fresh veggies, and melted cheese. Or savor our pizzas, a perfect fusion of crispy crust, rich sauce, and delightful toppings.
+                    </p>
+                    <a href="#" class="btn btn-warning" style="color: #fff;">1200₸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 all burger">
+              <div class="box">
+                <div class="card" style="height: 450px;">
+                  <img src="images/f8.png" class="card-img-top" height="200px" width="inherit" style="transform: scale(0.8);">
+                  <div class="card-body" style="background-color: #222831;">
+                    <h5 class="card-title" style="color: #fff;">Fish Burger</h5>
+                    <p style="color: #fff;">
+                      Indulge in our savory burgers, a symphony of juicy beef, fresh veggies, and melted cheese. Or savor our pizzas, a perfect fusion of crispy crust, rich sauce, and delightful toppings.
+                    </p>
+                    <a href="#" class="btn btn-warning" style="color: #fff;">2000₸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 all pasta">
+              <div class="box">
+                <div class="card" style="height: 450px;">
+                  <img src="images/f9.png" class="card-img-top" height="200px" width="inherit" style="transform: scale(0.8);">
+                  <div class="card-body" style="background-color: #222831;">
+                    <h5 class="card-title" style="color: #fff;">Pasta Lasagna</h5>
+                    <p style="color: #fff;">
+                      Indulge in our savory burgers, a symphony of juicy beef, fresh veggies, and melted cheese. Or savor our pizzas, a perfect fusion of crispy crust, rich sauce, and delightful toppings.
+                    </p>
+                    <a href="#" class="btn btn-warning" style="color: #fff;">2000₸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <a href="snake.html" >Play Snake game</a>
+        </div>
+        <div class="btn-box">
+          <a href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Play Game </a>
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" 
+          style="width: 1200px; margin: 0 auto; overflow: hidden;margin-right: 300px;">
+            <div class="modal-dialog" style="width: 1600px; margin: 0 auto;">
+              <div class="modal-content" style="width: 1600px; overflow: hidden;">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="width: inherit; height: 600px">
+                  <div id="dropZone">
+                    <div
+                      id="dropBox1"
+                      ondrop="drop(event)"
+                      ondragover="allowDrop(event)"
+                    >
+                      <p>Pizza</p>
+                    </div>
+                    <div
+                      id="dropBox2"
+                      ondrop="drop(event)"
+                      ondragover="allowDrop(event)"
+                    >
+                      <p>Burger</p>
+                    </div>
+                    <div
+                      id="dropBox3"
+                      ondrop="drop(event)"
+                      ondragover="allowDrop(event)"
+                    >
+                      <p>Frie</p>
+                    </div>
+                    <div
+                      id="dropBox4"
+                      ondrop="drop(event)"
+                      ondragover="allowDrop(event)"
+                    >
+                      <p>Pasta</p>
+                    </div>
+                  </div>
+                  <div
+                    id="animals"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  >
+                    <img
+                      class="dimg"
+                      id="cat"
+                      src="images/f1.png"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                      
+                    />
+                  <img
+                      class="dimg"
+                      id="dog"
+                      src="images/f2.png"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                      
+                    />
+                  <img
+                      class="dimg"
+                      id="mouse"
+                      src="images/f5.png"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                      
+                    />
+                  <img
+                      class="dimg"
+                      id="fish"
+                      src="images/f4.png"
+                      draggable="true"
+                      ondragstart="drag(event)"
+                     
+                    />
+                  </div>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="modal-footer">
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about_section layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/sv3TXMSv6Lw?si=LY1rqeuQH4cRgHFm&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>Welcome to Sayat's Pizza</h2>
+              </div>
+              <p>
+                Explore the extraordinary at Sayat's Pizza, where our culinary creations redefine taste. Enjoy a variety of mouthwatering pizzas and more, crafted with passion and served with excellence.
+              </p>
+              <a href="about.html"> Read More </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="client_section layout_padding-bottom" style="padding-top: 100px;">
+      <div class="container">
+        <div class="heading_container heading_center psudo_white_primary mb_45">
+          <h2>What Says Our Customers</h2>
+        </div>
+        <div class="carousel-wrap row">
+          <div class="owl-carousel client_owl-carousel">
+            <div class="item">
+              <div class="box">
+                <div class="detail-box">
+                  <p>
+                    The restaurant is very good, I liked the staff, and the excellent presentation of the dishes, I would like to highlight the owner and chef Sayat, who is a master of his craft.
+                  </p>
+                  <h6>Abzal</h6>
+                  <p>satisfactorily</p>
+                  <div class="img-box">
+                    <img src="images/.jpg" alt="" class="box-img" />
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="detail-box">
+                  <p>
+                    The restaurant is very good, I liked the staff, and the excellent presentation of the dishes, I would like to highlight the owner and chef Sayat, who is a master of his craft.
+                  </p>
+                  <h6>Amina</h6>
+                  <p>satisfactorily</p>
+                  <div class="img-box">
+                    <img src="images/.jpg" alt="" class="box-img" />
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <footer class="footer_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-col">
+           
+          </div>
+          <div class="col-md-4 footer-col">
+            <div class="footer_detail">
+              <a href="#top" class="footer-logo">Pizza</a>
+              <p>
+                Glad to see you in our fast food restaurant Sayat
+              </p>
+              <div class="footer_social">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-pinterest" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <div class="footer-info">
+          <p>
+            &copy; <span id="displayYear"></span> All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+ 
+  </body>
+</html>
